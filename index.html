@@ -14,7 +14,7 @@
 
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #111;
+        background-color: #36393f;
         color: #fff;
     }
 
@@ -24,9 +24,49 @@
         padding: 0 20px;
     }
 
+    /* Navbar Styles */
+    .navbar {
+        background-color: #202225;
+        color: #fff;
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        top: 0;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+    }
+
+    .navbar .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar .nav-links a:hover {
+        color: #6C9BCF;
+    }
+
     /* Header Styles */
     .hero {
-        background-image: linear-gradient(to bottom, #6C9BCF, #4B749F);
+        background-color: #202225;
         color: #fff;
         text-align: center;
         padding: 100px 0;
@@ -47,8 +87,8 @@
     }
 
     .button {
-        background-color: #fff;
-        color: #333;
+        background-color: #6C9BCF;
+        color: #fff;
         padding: 10px 20px;
         font-size: 16px;
         text-decoration: none;
@@ -59,12 +99,11 @@
 
     .button:hover {
         background-color: #4B749F;
-        color: #fff;
     }
 
     /* Main Content Styles */
     .main-content {
-        padding: 50px 0;
+        padding-top: 100px;
     }
 
     .section-title {
@@ -99,20 +138,41 @@
 
     /* Footer Styles */
     .footer {
-        background-color: #222;
+        background-color: #202225;
         color: #fff;
         text-align: center;
         padding: 20px 0;
     }
 
     /* Dark Mode */
-    .dark-mode {
-        background-color: #000;
-        color: #fff;
+    body.dark-mode {
+        background-color: #202225;
+    }
+
+    .navbar.dark-mode {
+        background-color: #202225;
+    }
+
+    .hero.dark-mode {
+        background-color: #36393f;
+    }
+
+    .footer.dark-mode {
+        background-color: #202225;
     }
 </style>
 </head>
 <body class="dark-mode">
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Best Website Ever</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
             <h1>Welcome to the Best Website Ever!</h1>
@@ -126,29 +186,18 @@
     </header>
 
     <main class="main-content">
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="container section-content">
                 <h2 class="section-title">About Us</h2>
                 <p>Welcome to our website! We are a team of passionate individuals dedicated to creating amazing web experiences.</p>
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <div class="container section-content">
                 <h2 class="section-title">Contact Us</h2>
                 <p>Have a question or feedback? Feel free to contact us using the form below.</p>
                 <!-- Add your contact form here -->
-            </div>
-        </section>
-
-        <section class="links-section">
-            <div class="container section-content">
-                <h2 class="section-title">Useful Links</h2>
-                <ul class="links-list">
-                    <li><a href="https://www.youtube.com/">YouTube</a></li>
-                    <li><a href="https://discord.com/">Discord</a></li>
-                    <li><a href="https://www.roblox.com/">Roblox</a></li>
-                </ul>
             </div>
         </section>
     </main>
