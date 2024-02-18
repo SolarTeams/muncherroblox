@@ -13,8 +13,9 @@
     }
 
     body {
-        font-family: Arial, sans-serif;
-        transition: background-color 0.5s, color 0.5s;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #111;
+        color: #fff;
     }
 
     .container {
@@ -32,7 +33,7 @@
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 48px;
         margin-bottom: 20px;
     }
 
@@ -66,73 +67,52 @@
         padding: 50px 0;
     }
 
-    .about-section,
-    .contact-section,
-    .links-section {
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .section-content {
         margin-bottom: 50px;
     }
 
-    .about-section h2,
-    .contact-section h2,
-    .links-section h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .contact-section p {
-        margin-bottom: 30px;
-    }
-
-    .links-section ul {
+    .links-list {
         list-style: none;
+        padding-left: 0;
     }
 
-    .links-section ul li {
+    .links-list li {
         margin-bottom: 10px;
     }
 
-    .links-section ul li a {
-        color: #333;
+    .links-list li a {
+        color: #fff;
         text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s;
     }
 
-    .links-section ul li a:hover {
-        color: #4B749F;
+    .links-list li a:hover {
+        color: #6C9BCF;
     }
 
     /* Footer Styles */
     .footer {
-        background-color: #333;
+        background-color: #222;
         color: #fff;
         text-align: center;
         padding: 20px 0;
     }
 
     /* Dark Mode */
-    body.dark {
-        background-color: #222;
+    .dark-mode {
+        background-color: #000;
         color: #fff;
-    }
-
-    .navbar.dark {
-        background-color: #111;
-    }
-
-    .hero.dark {
-        background-image: linear-gradient(to bottom, #222, #111);
-    }
-
-    .button.dark {
-        background-color: #6C9BCF;
-        color: #fff;
-    }
-
-    .footer.dark {
-        background-color: #111;
     }
 </style>
 </head>
-<body class="light">
+<body class="dark-mode">
     <header class="hero">
         <div class="container">
             <h1>Welcome to the Best Website Ever!</h1>
@@ -147,24 +127,24 @@
 
     <main class="main-content">
         <section class="about-section">
-            <div class="container">
-                <h2>About Us</h2>
+            <div class="container section-content">
+                <h2 class="section-title">About Us</h2>
                 <p>Welcome to our website! We are a team of passionate individuals dedicated to creating amazing web experiences.</p>
             </div>
         </section>
 
         <section class="contact-section">
-            <div class="container">
-                <h2>Contact Us</h2>
+            <div class="container section-content">
+                <h2 class="section-title">Contact Us</h2>
                 <p>Have a question or feedback? Feel free to contact us using the form below.</p>
                 <!-- Add your contact form here -->
             </div>
         </section>
 
         <section class="links-section">
-            <div class="container">
-                <h2>Useful Links</h2>
-                <ul>
+            <div class="container section-content">
+                <h2 class="section-title">Useful Links</h2>
+                <ul class="links-list">
                     <li><a href="https://www.youtube.com/">YouTube</a></li>
                     <li><a href="https://discord.com/">Discord</a></li>
                     <li><a href="https://www.roblox.com/">Roblox</a></li>
@@ -178,11 +158,5 @@
             <p>&copy; 2023 Best Website Ever. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle('dark');
-        }
-    </script>
 </body>
 </html>
